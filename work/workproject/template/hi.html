@@ -1,0 +1,12 @@
+{% extends 'base.html' %}                      <!--for including html page for reuseing-->
+{% block body %}
+
+
+<div class="">
+{% csrf_token %}
+{% if user.is_authenticated %}
+<h3 style="color:white;">Hi,<br>Welcome {{user.username}} !</h3>
+{% endif %}
+
+</div>
+{% endblock %}
